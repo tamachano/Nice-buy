@@ -25,7 +25,7 @@ function analyzeValues({ q2, q3, q4 }) {
 
   return {
     axis: axis.label,
-    statement: `あなたが大切にしているのは、${axis.def}です。${selfDesc}こと、そして${destinyNote}──これがあなたの「買い物の美学」の核心です。`,
+    statement: `あなたが大切にしているのは、${axis.def}です。\n${selfDesc}こと、そして${destinyNote}──これがあなたの「買い物の美学」の核心です。`,
   };
 }
 
@@ -164,7 +164,7 @@ function Step1({ answers, onChange, onNext }) {
       />
       <Echo text={echo} />
       <div className="flex justify-end">
-        <NextBtn disabled={!answers.q3} onClick={onNext} />      </div>
+        <NextBtn disabled={!valid} onClick={onNext} />      </div>
     </div>
   );
 }
